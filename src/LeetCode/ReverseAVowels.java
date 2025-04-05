@@ -6,6 +6,8 @@ public class ReverseAVowels {
 
 
         System.out.println(reverseVowels("Jaichandran"));
+        System.out.println(10%50);
+        System.out.println(100/50);
         //aaia
         //jaachndr n
 
