@@ -61,13 +61,20 @@ public class SolvingEmployeeMSStreams {
         Optional<Employee> highestPaidEmployeeWrapper=
                 employeeList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
 
-        
+//        /
+        //Query 3.8 : Get the details of youngest male employee in the product development department?
+
+     Optional<Employee> ypungMaleEmployee=   employeeList.stream().filter(n->n.getDepartment().equals("Product Development") && n.getGender().equals("Male") )
+                .collect(Collectors.minBy(Comparator.comparingInt(Employee::getAge)));
+
+        System.out.println(ypungMaleEmployee.get().name);
 
 
+//Query 3.12 : List down the names of all employees in each department?
 
+      Map<String,List<String>> emp=  employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment,Collectors.mapping(Employee::getName,Collectors.toList())));
 
-
-
+        System.out.println(emp);
 
     }
 }

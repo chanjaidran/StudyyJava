@@ -2,7 +2,7 @@ package MutiThreading;
 
 public class RaceCondition2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
 //        CheckAndThen checkAndThen1=new CheckAndThen();
@@ -19,6 +19,7 @@ public class RaceCondition2 {
         Thread thread11=new Thread(CheckAndThenSynchronised,"Ramesh");
         Thread thread21=new Thread(CheckAndThenSynchronised,"payal");
         thread11.start();
+
         thread21.start();
 
 

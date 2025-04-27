@@ -27,13 +27,15 @@ class  ReadMoidifyWrite implements Runnable
     @Override
     public void run() {
 
-        for (int i=0;i<10000;i++)
-        {
-            shared++;
-        }
+        //USe Synchronised(this)
+
+            for (int i = 0; i < 1000000; i++) {
+                shared++;
+            }
+
     }
 
-    public int getSharedCount() {
+    public  synchronized int getSharedCount() {
         return shared;
     }
 }
