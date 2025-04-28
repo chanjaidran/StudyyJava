@@ -12,7 +12,10 @@ public class CountNameOcuurence {
 
         String name="Jai is good boy jai chan also good";
         String[] arr1=name.split(" ");
-        System.out.println(arr1);
+        System.out.println(arr1.length);
+
+
+
 
         Map<String,Integer> characterHashMap=new HashMap<>();
 
