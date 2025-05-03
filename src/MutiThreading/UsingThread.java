@@ -8,6 +8,9 @@ public class UsingThread {
 
         Mythread thread2=new Mythread();
         thread2.start();
+
+        System.out.println(thread1);
+        System.out.println(thread2);
     }
 }
 

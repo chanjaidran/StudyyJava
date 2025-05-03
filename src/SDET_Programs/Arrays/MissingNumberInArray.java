@@ -7,8 +7,8 @@ public class MissingNumberInArray {
     public static void main(String[] args) {
 
 
-     int arr[]={1,3,4,5};
-      // int arr[] ={3,0,1};
+     //int arr[]={1,3,4,5};
+       int arr[] ={3,0,1};
         int sum1= Arrays.stream(arr).sum();
         Arrays.sort(arr);
         int n=0;

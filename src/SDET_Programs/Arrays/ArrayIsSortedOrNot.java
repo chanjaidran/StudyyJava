@@ -28,6 +28,6 @@ public class ArrayIsSortedOrNot {
             System.out.println("not sorted");
 
 
-        BigInteger.valueOf(8).isProbablePrime(10);
+
     }
 }

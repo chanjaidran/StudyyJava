@@ -1,7 +1,7 @@
 package MutiThreading;
 
 public class DaemonThread {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         Thread thread1=new Thread(()->{
@@ -42,9 +42,27 @@ public class DaemonThread {
             }
         });
 
+        Runnable runnable=()->{
+            for (int i=0;i<=10;i++)
+                try {
+                System.out.println("kk");
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        };
+
+       Thread thread=new Thread(runnable);
+       thread.setDaemon(true);
+       thread.start();
+
 
         thread1.start();
+
         thread2.start();
+
+
+
         daemonthread.setDaemon(true);
         daemonthread.start();
 
