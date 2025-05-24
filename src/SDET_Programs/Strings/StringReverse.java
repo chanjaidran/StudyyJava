@@ -11,5 +11,8 @@ public class StringReverse {
         {
             System.out.print(anagram1.charAt(i)+"");
         }
+        System.out.println();
+        StringBuilder s=new StringBuilder(anagram1);
+        System.out.println(s.reverse().toString());
     }
 }

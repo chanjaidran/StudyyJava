@@ -28,6 +28,11 @@ public class SortHahMapByValue {
         sortedByMapDesc.forEach((k,v)-> System.out.println(k+" "+v));
 
 
+        map.entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue,(a,b)->a,LinkedHashMap::new));
+
+        System.out.println(sortedByMap);
+
 
 
     }
