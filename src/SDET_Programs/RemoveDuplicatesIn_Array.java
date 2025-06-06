@@ -9,6 +9,7 @@ public class RemoveDuplicatesIn_Array {
 
         int arr[]={1,2,3,4,3,21,2};
 
+        Arrays.stream(arr).distinct().forEach(System.out::print);
         Set<Integer> set=new HashSet<>();
         for (int i :arr)
         {

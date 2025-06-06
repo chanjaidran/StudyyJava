@@ -11,9 +11,9 @@ public class StringIsPalindrome {
         String anagram1="Silent";
         String anagram2="Listen";
 
-       String s1=anagram1.toLowerCase().chars().sorted().mapToObj(c->String.valueOf((char)c)).collect(Collectors.joining());
+       String s1=anagram1.toLowerCase().chars().mapToObj(c->String.valueOf((char)c)).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
 
-        String s2=anagram1.toLowerCase().chars().sorted().mapToObj(c->String.valueOf((char)c)).collect(Collectors.joining());
+        String s2=anagram2.toLowerCase().chars().sorted().mapToObj(c->String.valueOf((char)c)).collect(Collectors.joining());
 
         System.out.println(s1+" "+s2);
 

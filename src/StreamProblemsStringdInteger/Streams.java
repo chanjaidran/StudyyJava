@@ -10,7 +10,12 @@ public class Streams {
     public static void main(String[] args) {
 
         List<Integer> integerList= Arrays.asList(1,2,3,4,5,6,7,8,9,10,1);
+
+        integerList.stream().sorted(Comparator.reverseOrder()).limit(3).skip(2).forEach(System.out::println);
         String name="ABRACADABRAA";
+
+       String a= name.chars().mapToObj(c->String.valueOf((char) c)).distinct().collect(Collectors.joining());
+        System.out.println(a);
         List<String> stringList=Arrays.asList("a","b","c","d","e");
         int[] arr1={1,2,3,4,5};
         int[] arr2={6,7,8,9,10};
@@ -73,6 +78,8 @@ public class Streams {
 
      int max=   integerList.stream().max(Integer::compareTo).get();
      int min=   integerList.stream().min(Integer::compareTo).get();
+
+
 
         System.out.println(max+" "+min);
 

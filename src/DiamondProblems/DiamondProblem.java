@@ -25,8 +25,9 @@ class D implements B, C{
         B.super.show();  // This works and calls A's version
     }
 }
-
 public class DiamondProblem {
+
+
     public static void main(String[] args) {
         D obj = new D();
         obj.show();  // Should print: Show A

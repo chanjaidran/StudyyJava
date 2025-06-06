@@ -33,6 +33,8 @@ public class SolvingEmployeeMSStreams {
        Map<String,List<String>> MF= employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.mapping(Employee::getName,Collectors.toList())));
         System.out.println(MF);
 
+        employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.mapping(Employee::getName,Collectors.toList())));
+
         for (Map.Entry<String,List<String>> MFN:MF.entrySet())
         {
             System.out.println(MFN.getKey());
@@ -54,12 +56,18 @@ public class SolvingEmployeeMSStreams {
         Map<String, Double> AverageAgeofMAleandFemaleEMployees=  employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getAge)));
         System.out.println(AverageAgeofMAleandFemaleEMployees);
 
+        employeeList.stream().collect(Collectors.groupingBy(Employee::getGender,Collectors.averagingDouble(Employee::getAge)));
+
     //    Query 3.4 : Get the details of highest paid employee in the organization?
 
         employeeList.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).limit(1).forEach(s-> System.out.println(s));
 
+
         Optional<Employee> highestPaidEmployeeWrapper=
                 employeeList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
+
+
+
 
 //        /
         //Query 3.8 : Get the details of youngest male employee in the product development department?

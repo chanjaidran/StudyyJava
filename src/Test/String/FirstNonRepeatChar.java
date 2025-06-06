@@ -13,6 +13,8 @@ public class FirstNonRepeatChar {
 
         String s1="jajcoboacj";
 
+        s1.chars().mapToObj(a->(char)a).distinct().forEach(a-> System.out.println(a));
+
         s1.replaceAll("\\s+", "") // remove spaces
                 .chars()
                 .mapToObj(s -> (char) s)
