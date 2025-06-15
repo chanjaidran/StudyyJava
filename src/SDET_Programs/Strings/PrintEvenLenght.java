@@ -5,6 +5,8 @@ public class PrintEvenLenght {
 
         String s="This is a java language";
        String arr[]=s.split(" ");
+       String e=s.replaceAll(" ","--");
+        System.out.println(e);
 
        reverse(arr,0,arr.length-1);
 
